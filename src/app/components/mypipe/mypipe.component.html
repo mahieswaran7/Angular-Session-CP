@@ -1,0 +1,42 @@
+<p>mypipe works!</p>
+
+<h3>cube of 5 is:{{5|cube}}</h3>
+
+<div>
+    {{msg}}
+
+    <!-- using string pipe -->
+</div>
+
+<div>{{msg | uppercase}} </div>
+   <div> {{msg | lowercase}}</div>
+   <div> {{msg | titlecase}}</div>
+    <div>{{msg | slice:2:5}}</div>
+
+
+<!-- use of json pipe -->
+
+<!-- <p>{{}}</p> -->
+
+
+<!-- use of number pipe -->
+
+
+<p>{{567}}</p>
+<p>{{567| number:"3.5-6"}}</p>
+<p>{{0.567 | number: "3.5-6"}}</p>
+<p>{{0.567|number:"3.3-3"}}</p>
+<p>{{0.567|number:"3.1-2"}}</p>
+
+<!-- use of date type -->
+ <p>{{dateObj}}</p>
+ <p>{{dateObj | date}}</p>
+ <p>{{dateObj | date:"shortDate"}}</p>
+ <p>{{dateObj | date:"longDate"}}</p>
+
+
+<!--use of currency pipe-->
+
+<p>{{100|currency}}</p>
+<p>{{100|currency:"GBP"}}</p>
+<p>{{100|currency:"INR"}}</p>

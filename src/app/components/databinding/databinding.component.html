@@ -1,0 +1,32 @@
+<p>welcome to chennai</p>
+
+
+<!--use of interpolation-->
+<h3>{{myName}}</h3>
+<p>{{100*5}}</p>
+<p>{{num1+num2}}</p>
+
+<hr>
+
+<!--property binding-->
+
+<img src="https://t4.ftcdn.net/jpg/03/21/32/45/360_F_321324549_3utrdpZOFdsyUElymaPhm5LXRyTpnteh.jpg" alt="burger">
+
+<hr>
+
+<!--Event binding-->
+
+<button type="button" (click)="greeting()">click on me</button>
+
+<hr>
+
+<!--Use of ngModel-->
+
+<form >
+ 
+    <input type="text" name="txt1"[(ngModel)]="myData">{{myData}}
+
+</form>
+
+
+

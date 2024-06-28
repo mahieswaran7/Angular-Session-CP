@@ -1,0 +1,19 @@
+<p>list-task works!</p>
+
+<div class="container">
+    <div class="button-container">
+        <button class="btn" click="showcars()">Cars</button>
+        <button class="btn" click="showBikes()">Bikes</button>
+    </div>
+
+    <div *ngIf="items.length>0" class="list-container">
+        <ul>
+            <li *ngFor="let item of items" (click)="selectItem(item)" class="list-item">
+
+                {{items}}
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="selectItem">Your choice is : {{selectedItem}}</div>
+</div>

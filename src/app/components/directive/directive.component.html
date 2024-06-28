@@ -1,0 +1,39 @@
+<p>directives works !</p>
+
+<!--use of ngIf-->
+
+<h2 *ngIf="isCond1">Use of *ngIf directive when it has true value</h2>
+<h2 *ngIf="isCond2">Use of *ngIf directive when it has false value</h2>
+
+<div *ngIf="isCond2 then truepart else falsepart"></div>
+
+<ng-template #truepart>
+    <h2>I like samosa</h2>
+</ng-template>
+
+
+<ng-template #falsepart>
+    <h2>I like Dosa</h2>
+</ng-template>
+
+<!--use of *ngFor-->
+
+<ul>
+    <li *ngFor=" let bike of bikes"> {{bike}}</li>
+</ul>
+
+<!-- use of *ngSwitchCase -->
+
+<div [ngSwitch]="mybike">
+    <div *ngSwitchCase="'honda'">you have selected Hero Honda</div>
+    <div *ngSwitchCase="'bmw'">you have selected bmw</div>
+    <div *ngSwitchCase="'ducati'"> you have selected ducati</div>
+    <div *ngSwitchCase="'yamaha'"> yamaha selected</div>
+    <div *ngSwitchCase="'royal'"> royal enfield selected</div>
+
+
+    <div *ngFor="let bike of bikes">
+        <div *ngSwitchCase="bike">you have selected <strong>{{bike}}</strong></div>
+    </div>
+    <div *ngSwitchDefault>Invalid Choice</div>
+</div>
